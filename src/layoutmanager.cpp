@@ -168,6 +168,8 @@ LayoutManager::LayoutList LayoutManager::getLeftLayout(uint16_t index) {
             return drawBoardDefinedAlt6A();   
         case BUTTON_LAYOUT_BOARD_DEFINED_ALT7_A:
             return drawBoardDefinedAlt7A();    
+			  case BUTTON_LAYOUT_MYBOARD_LEFT:
+            return this->drawMyBoardA();
         default:
             break;
     }
@@ -276,6 +278,8 @@ LayoutManager::LayoutList LayoutManager::getRightLayout(uint16_t index) {
             return this->drawBoardDefinedAlt6B();
         case BUTTON_LAYOUT_BOARD_DEFINED_ALT7_B:
             return this->drawBoardDefinedAlt7B();
+			  case BUTTON_LAYOUT_MYBOARD_RIGHT:
+            return this->drawMyBoardB();
         default:
             break;
     }
@@ -864,4 +868,14 @@ LayoutManager::LayoutList LayoutManager::drawBoardDefinedAlt7B() {
 #else
     return {};
 #endif
+}
+
+LayoutManager::LayoutList LayoutManager::drawMyBoardA()
+{
+    return BUTTON_GROUP_MYBOARD_A;
+}
+
+LayoutManager::LayoutList LayoutManager::drawMyBoardB()
+{
+    return BUTTON_GROUP_MYBOARD_B;
 }
