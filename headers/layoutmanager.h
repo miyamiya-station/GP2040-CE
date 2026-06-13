@@ -86,6 +86,8 @@ class LayoutManager {
         LayoutList drawTwinStickB();
         LayoutList drawBlankA();
         LayoutList drawBlankB();
+        LayoutList drawMyBoardA();
+        LayoutList drawMyBoardB();
         LayoutList drawVLXA();
         LayoutList drawVLXB();
         LayoutList drawVLXB6B();
